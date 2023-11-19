@@ -17,9 +17,6 @@ jobs:
       - name: Step2
         run: echo Step 2!
 
-  job2:
-    runs-on: ubuntu-latest
-
   cow:
     name: Cowsays
     runs-on: ubuntu-latest
