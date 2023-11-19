@@ -19,6 +19,7 @@ jobs:
 
   cow:
     name: Cowsays
+    needs: job1
     runs-on: ubuntu-latest
     steps:
     - name: Ship it
