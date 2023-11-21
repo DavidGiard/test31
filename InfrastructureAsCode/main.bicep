@@ -5,10 +5,10 @@ param environment string = 'dev'
 param location string = resourceGroup().location
 
 var webAppName = '${uniqueString(resourceGroup().id)}-${environment}'
-var appServicePlanName = '${uniqueString(resourceGroup().id)}-wth-asp'
-var appInsightsName = '${uniqueString(resourceGroup().id)}-wth-ai'
+var appServicePlanName = '${uniqueString(resourceGroup().id)}-wth-asp-${environment}'
+var appInsightsName = '${uniqueString(resourceGroup().id)}-wth-ai-${environment}'
 var sku = 'S1'
-var registryName = '${uniqueString(resourceGroup().id)}wthreg'
+var registryName = '${uniqueString(resourceGroup().id)}wthreg-${environment}'
 var registrySku = 'Standard'
 var imageName = 'wthimage'
 var startupCommand = ''
