@@ -4,7 +4,6 @@
 name: .NET
 
 on:
-on:
   push:
     branches: [ main ]
     paths: Application/*
