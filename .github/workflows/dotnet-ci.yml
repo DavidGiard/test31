@@ -74,7 +74,14 @@ jobs:
       - name: 'Login via Azure CLI'
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          # Server address of Docker registry. If not set then will default to Docker Hub
+          registry: ${{ env.registryName }}
+          # Username used to log against the Docker registry
+          username: ${{ secrets.ACR_USERNAME }}
+          # Password or personal access token used to log against the Docker registry
+          password: ${{ secrets.ACR_PASSWORD }}
+          # Log out from the Docker registry at the end of a job
+          logout: true
 
       - uses: azure/webapps-deploy@v2
         with:
