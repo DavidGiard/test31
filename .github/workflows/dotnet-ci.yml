@@ -68,7 +68,7 @@ jobs:
     needs: build
     environment:
       name: dev
-      url: https://devopsreg-dev.azurewebsites.net/
+      url: https://xurtc4ohgt4mk-dev.azurewebsites.net/
     
     steps:
       - name: 'Login via Azure CLI'
