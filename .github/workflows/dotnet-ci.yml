@@ -65,7 +65,7 @@ jobs:
   deploy-to-dev:
   
     runs-on: ubuntu-latest
-    needs: build
+    needs: dockerBuildPush
     environment:
       name: dev
       url: https://xurtc4ohgt4mk-dev.azurewebsites.net/
@@ -84,7 +84,7 @@ jobs:
   deploy-to-test:
   
     runs-on: ubuntu-latest
-    needs: build
+    needs: dockerBuildPush
     environment:
       name: test
       url: https://xurtc4ohgt4mk-test.azurewebsites.net/
@@ -103,7 +103,7 @@ jobs:
   deploy-to-prod:
   
     runs-on: ubuntu-latest
-    needs: build
+    needs: dockerBuildPush
     environment:
       name: prod
       url: https://xurtc4ohgt4mk-prod.azurewebsites.net/
