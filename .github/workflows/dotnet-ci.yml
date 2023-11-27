@@ -78,5 +78,5 @@ jobs:
 
       - uses: azure/webapps-deploy@v2
         with:
-          app-name: 'devopsreg-dev'
+          app-name: 'xurtc4ohgt4mk-dev'
           images: ${{secrets.ACR_NAME}}/wth/razorcore:${{github.run_number}}
